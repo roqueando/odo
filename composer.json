@@ -1,0 +1,13 @@
+{
+    "name": "roqueando/odo",
+    "description": "Bii sisan odo.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitor Roque",
+            "email": "vitor.roquep@gmail.com"
+        }
+    ],
+    "require": {}
+}
