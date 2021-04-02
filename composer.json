@@ -9,5 +9,15 @@
             "email": "vitor.roquep@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/console": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Odo\\": "src/"
+        }
+    },
+    "require-dev": {
+        "swoole/ide-helper": "^4.6"
+    }
 }
