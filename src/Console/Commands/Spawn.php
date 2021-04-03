@@ -18,7 +18,7 @@ class Spawn extends Command
              ->setDescription('Spawn a service')
              ->setHelp("This command runs the Odo supervisor to listen messages")
              ->addArgument('service', InputArgument::REQUIRED, 'Service class to be spawned')
-             ->addOption('port', 'p', InputOption::VALUE_REQUIRED, 'Service port')
+             ->addOption('port', 'p', InputOption::VALUE_OPTIONAL, 'Service port')
              ->addOption('type', 't', InputOption::VALUE_REQUIRED, 'Service type [tcp | udp | http]', 'tcp');
     }
 

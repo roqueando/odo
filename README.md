@@ -1,16 +1,23 @@
-# Odò
+![Odo Logo](/resources/Odo.png)
 
-Um projeto criado para servicos distribuidos com PHP.
+# Odò
+A project created for distributed services made with ❤️  and PHP.
 <br>
 
-## Esclarecimentos
-- Esse projeto utiliza Swoole como base para os Servers e Services criados.
-- Esse projeto utiliza o PHP 8 para o estilo de codigo imposto. Podendo ver as mudancas no [PHP 8](https://www.php.net/releases/8.0/en.php)
+## Languages
+- [Portuguese Brazil](https://github.com/roqueando/odo/blob/main/README_pt_BR.md)
 
-## Atencao
-1. Os nomes criados em Ioruba, para Services, Supervisor e afins, nao seguem os padroes impostos de proposito.
-2. Os padroes impostos de codigo PHP seguidos do PHP FIG como as PSRs e coding style sao seguidos normalmente.
+## Notes
+- That project use Swoole for Servers, Services and others.
+- That project also use last updates from PHP 8 for coding style, check this out in [PHP 8](https://www.php.net/releases/8.0/en.php)
+- Is a personal package for a personal project and studies, if want to know how it works, check the [docs]()
 
-## Traducoes
-1. [Iyansile] significa Tarefa, Servico a ser prestado
-2. [Alabojuto] significa Supervisor
+## Attention
+1. The created names in Yoruba for services, supervisor and others, DO NOT follow the name patterns in purpose.
+2. The patterns used like [PSRs](https://www.php-fig.org/psr/) from PHP-FIG is most followed.
+
+## Translate
+1. Iyansile means task, some service to be done.
+2. Alabojuto means supervisor, manager.
+3. Ojise means messenger, who will deliver the message
+4. Idanwo means test.

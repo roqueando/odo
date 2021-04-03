@@ -10,14 +10,17 @@
         }
     ],
     "require": {
-        "symfony/console": "^5.2"
+        "symfony/console": "^5.2",
+        "monolog/monolog": "^2.2"
     },
     "autoload": {
         "psr-4": {
-            "Odo\\": "src/"
+            "Odo\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "require-dev": {
-        "swoole/ide-helper": "^4.6"
+        "swoole/ide-helper": "^4.6",
+        "phpunit/phpunit": "^9"
     }
 }

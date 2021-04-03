@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":294:{a:2:{s:7:"defects";a:1:{s:63:"Tests\Feature\RunningServicesTest::should_have_services_running";i:3;}s:5:"times";a:2:{s:63:"Tests\Feature\RunningServicesTest::should_have_services_running";d:3.058;s:80:"Tests\Feature\RunningServicesTest::should_return_error_log_if_send_wrong_message";d:2.054;}}}

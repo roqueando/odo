@@ -2,8 +2,13 @@
 
 namespace Odo;
 
+use Exception;
+use Odo\Exceptions\CouldNotConnectToAlabojuto;
 use Swoole\Server;
+use Swoole\Client;
 use Odo\Listeners\ServerListener;
+use Odo\Ojise\Message;
+use Odo\Ojise\Payload;
 
 abstract class Iyansile
 {
@@ -42,18 +47,19 @@ abstract class Iyansile
      */
     public function run(): void
     {
+        $this->registerOnSupervisor();
         $this->server->start();
     }
 
     /**
-     * Set the receiver for tcp or udp
+     * Set the receiver packet for tcp or udp
      * @param callable $handler callback function for handle receiver
      * @return void
      */
-    public function setReceiver(callable $handler): void
+    public function setPacketReceiver(callable $handler): void
     {
         if($this->type != self::TYPE_HTTP) {
-            $this->server->on('receive', $handler);
+            $this->server->on('packet', $handler);
         }
     }
 
@@ -64,5 +70,26 @@ abstract class Iyansile
     public function getId(): string
     {
         return $this->id;
+    }
+
+    /**
+     * Register service on Alabojuto service pool
+     * @throws CouldNotConnectToAlabojuto
+     */
+    protected function registerOnSupervisor(): void
+    {
+        $client = new Client(SWOOLE_SOCK_TCP);
+        if(!$client->connect('0.0.0.0', 8000)) {
+            throw new CouldNotConnectToAlabojuto();
+        }
+        $payload = $this->createRegisterPayload([
+            'id' => $this->getId()
+        ]);
+        $client->send(serialize(new Message($payload)));
+    }
+
+    private function createRegisterPayload(array $data): Payload
+    {
+        return new Payload(Payload::ACTION_REGISTER, (object) $data);
     }
 }

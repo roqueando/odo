@@ -30,5 +30,6 @@ class Run extends Command
     {
         $output->writeln("<question>ti nṣàn odo.<comment> The river start to flow </comment></question>");
         (new Alabojuto(port: $input->getOption('port')))->run();
+        return 1;
     }
 }
